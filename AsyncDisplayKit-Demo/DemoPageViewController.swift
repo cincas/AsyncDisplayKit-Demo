@@ -24,19 +24,30 @@ class DemoPageViewController: UIViewController {
         let toolbar = UIToolbar()
         view.addSubview(toolbar)
         
-        let pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
-        pageViewController.dataSource = pageViewModel
-        pageViewController.automaticallyAdjustsScrollViewInsets = false
-        pageViewController.edgesForExtendedLayout = .None
-        pageViewController.extendedLayoutIncludesOpaqueBars = false
-        pageViewController.navigationController?.hidesBarsOnSwipe = true
+        // Use page view controller cause the same problem
+//        let pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
+//        pageViewController.dataSource = pageViewModel
+//        pageViewController.automaticallyAdjustsScrollViewInsets = false
+//        pageViewController.edgesForExtendedLayout = .None
+//        pageViewController.extendedLayoutIncludesOpaqueBars = false
+//        pageViewController.navigationController?.hidesBarsOnSwipe = true
+//        
+//        pageViewController.setViewControllers([DemoViewController(nibName: nil, bundle: nil)], direction: .Forward, animated: false, completion: nil)
+//        
+//        addChildViewController(pageViewController)
+//        view.addSubview(pageViewController.view)
+//        
+//        pageViewController.view.snp_makeConstraints { (make) in
+//            make.top.left.right.equalTo(view)
+//            make.bottom.equalTo(toolbar.snp_top)
+//        }
         
-        pageViewController.setViewControllers([DemoViewController(nibName: nil, bundle: nil)], direction: .Forward, animated: false, completion: nil)
+        // Use view controller directly cause same problem
+        let viewController = DemoViewController()
+        addChildViewController(viewController)
+        view.addSubview(viewController.view)
         
-        addChildViewController(pageViewController)
-        view.addSubview(pageViewController.view)
-        
-        pageViewController.view.snp_makeConstraints { (make) in
+        viewController.view.snp_makeConstraints { (make) in
             make.top.left.right.equalTo(view)
             make.bottom.equalTo(toolbar.snp_top)
         }
@@ -44,7 +55,6 @@ class DemoPageViewController: UIViewController {
         toolbar.snp_makeConstraints { (make) in
             make.left.right.bottom.equalTo(view)
         }
-        
         
         let closeButtonItem = UIBarButtonItem(barButtonSystemItem: .Stop, target: self, action: #selector(DemoPageViewController.close))
         self.navigationItem.leftBarButtonItem = closeButtonItem
@@ -57,10 +67,10 @@ class DemoPageViewController: UIViewController {
 
 class PageViewModel: NSObject, UIPageViewControllerDataSource {
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        return DemoViewController(nibName: nil, bundle: nil)
+        return DemoViewController()
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        return DemoViewController(nibName: nil, bundle: nil)
+        return DemoViewController()
     }
 }
