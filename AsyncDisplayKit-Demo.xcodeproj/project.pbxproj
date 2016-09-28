@@ -15,6 +15,8 @@
 		1EA185001D991CFC00B3E3F8 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA184FF1D991CFC00B3E3F8 /* DemoViewController.swift */; };
 		1EA185081D99EE4C00B3E3F8 /* DemoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA185071D99EE4C00B3E3F8 /* DemoPageViewController.swift */; };
 		698E9A64502B171A926B85E0 /* Pods_AsyncDisplayKit_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8C7A08C0E1FECF86D066AC /* Pods_AsyncDisplayKit_Demo.framework */; };
+		F6788E791D9BA44300DE23A4 /* Webable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6788E781D9BA44300DE23A4 /* Webable.swift */; };
+		F6788E7B1D9BA54F00DE23A4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6788E7A1D9BA54F00DE23A4 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		7C7BFBB0EF5BC4EF6A3B2F54 /* Pods-AsyncDisplayKit-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsyncDisplayKit-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AsyncDisplayKit-Demo/Pods-AsyncDisplayKit-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		8D8C7A08C0E1FECF86D066AC /* Pods_AsyncDisplayKit_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AsyncDisplayKit_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6617332BA2C2BD1AD2F1BDA /* Pods-AsyncDisplayKit-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsyncDisplayKit-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AsyncDisplayKit-Demo/Pods-AsyncDisplayKit-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		F6788E781D9BA44300DE23A4 /* Webable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webable.swift; sourceTree = "<group>"; };
+		F6788E7A1D9BA54F00DE23A4 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				1EA184F91D991C1600B3E3F8 /* Info.plist */,
 				1EA184FF1D991CFC00B3E3F8 /* DemoViewController.swift */,
 				1EA185071D99EE4C00B3E3F8 /* DemoPageViewController.swift */,
+				F6788E781D9BA44300DE23A4 /* Webable.swift */,
+				F6788E7A1D9BA54F00DE23A4 /* WebViewController.swift */,
 			);
 			path = "AsyncDisplayKit-Demo";
 			sourceTree = "<group>";
@@ -218,6 +224,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EA185081D99EE4C00B3E3F8 /* DemoPageViewController.swift in Sources */,
+				F6788E7B1D9BA54F00DE23A4 /* WebViewController.swift in Sources */,
+				F6788E791D9BA44300DE23A4 /* Webable.swift in Sources */,
 				1EA185001D991CFC00B3E3F8 /* DemoViewController.swift in Sources */,
 				1EA184F01D991C1600B3E3F8 /* ViewController.swift in Sources */,
 				1EA184EE1D991C1600B3E3F8 /* AppDelegate.swift in Sources */,
